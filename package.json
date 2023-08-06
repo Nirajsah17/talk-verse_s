@@ -1,14 +1,41 @@
 {
-  "name": "chatserver",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "talk-verse_s",
+  "version": "0.0.0",
+  "description": "talk-verse_c",
+  "author": "Niraj Kumar <nirajnsp5@gmail.com> Pallawi Sharma <chikupallawi98@gmail.com>",
+  "contributors": [
+    "pallawi",
+    "niraj"
+  ],
+  "main": "src/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "start": "node ./index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "readmeFilename": "README.md",
+  "keywords": [
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nirajsah17/talk-verse_c.git"
+  },
+  "homepage": "",
+  "bugs": {},
+  "devDependencies": {
+  },
+  "engines": {
+    "node": ">= v12.16.2"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
