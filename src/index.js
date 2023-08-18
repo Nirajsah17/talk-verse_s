@@ -36,6 +36,11 @@ app.get("/api/v1/login", (req, res) => {
     UserDB.all(sql, [], (err, rows) => {
         if (err) return res.json({ status: 404, success: false, err: err });
         if (rows.length < 1) return res.json({ status: 404, success: false, err: 'Not Found' });;
+        const token = createToken(user);
+        res.cookie("access-token", token,{
+            maxAge: 60 * 60 *24 *30 *1000
+        });
+        res.json("logged in")
         return res.json({ status: 200, success: true, data: email });
     });
 
