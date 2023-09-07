@@ -6,7 +6,7 @@ const db = new sqlite.Database(database, sqlite.OPEN_READWRITE, (err) => {
 });
 
 const userSql = `CREATE TABLE IF NOT EXISTS User(user_id INETEGER PRIMARY KEY, username TEXT, email TEXT, password TEXT)`;
-const contactSql = `CREATE TABLE IF NOT EXISTS Contacts (contact_id INETEGER PRIMARY KEY, username TEXT, name TEXT, email TEXT)`;
+const contactSql = `CREATE TABLE IF NOT EXISTS Contacts (contact_id INETEGER PRIMARY KEY, user TEXT, name TEXT, email TEXT)`;
 
 db.run(userSql);
 db.run(contactSql);
